@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('#diana_ross').hide();
 
     //other questions//
-    $('.answer_audio').hide();
+    
     $('#container2').hide();
     $('#container3').hide();
     $('#container4').hide();
