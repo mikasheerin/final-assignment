@@ -22,107 +22,107 @@
       <div class="col-lg-9">
 
         <h1>Would You Like a Sample?</h1>
-        <p>Paragraph text <a href="https://en.wikipedia.org/wiki/Stranger_Things#Main">Link.</a></p>
+        <p>Information gathered from <a href="https://www.whosampled.com">WhoSampled.</a> All answers are songs that have been sampled by the artist at some point in time.</p>
 
         <form>
 
           <div class="question1">
-                <div id="biggie">
-                  <img id="mo_money_mo_problems_img" class="albumart" src="images/mo_money_mo_problems_img.jpg" alt="Mo Money Mo Problems by Notorious B.I.G.">
 
-                  <div class="question_audio">
+                <div><img id="mo_money_mo_problems_img" class="albumart" src="images/mo_money_mo_problems_img.jpg" alt="Mo Money Mo Problems by Notorious B.I.G."></div>
+
+                <div id="question1">
+                  <audio controls preload="auto">
+                    <source src="audio/mo_money_mo_problems.mp3" type="audio/mp3">
+                  </audio>
+                </div>
+
+              <div>
+                <div id="diana_ross" style="width:100%; height:400px;">
+                <script>
+                Highcharts.chart('diana_ross', {
+                  chart: {
+                      plotBackgroundColor: null,
+                      plotBorderWidth: 0,
+                      plotShadow: false
+                  },
+                  title: {
+                      text: 'Percentage<br>of song<br>that uses<br>sample',
+                      align: 'center',
+                      verticalAlign: 'middle',
+                      y: 40
+                  },
+                  tooltip: {
+                      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                  },
+                  plotOptions: {
+                      pie: {
+                          dataLabels: {
+                              enabled: true,
+                              distance: -50,
+                              style: {
+                                  fontWeight: 'bold',
+                                  color: 'white'
+                              }
+                          },
+                          startAngle: -90,
+                          endAngle: 90,
+                          center: ['50%', '75%']
+                      }
+                  },
+                  series: [{
+                      type: 'pie',
+                      name: 'Sample appearance',
+                      innerSize: '50%',
+                      data: [
+                          ['Sample', 100],
+                      ]
+                  }]
+              });
+                </script>
+
+                  <div id="answer1">
                     <audio controls preload="auto">
-                      <source src="audio/mo_money_mo_problems.mp3" type="audio/mp3">
+                      <source src="audio/im_coming_out.mp3" type="audio/mp3">
                     </audio>
                   </div>
                 </div>
-
-                <div id="diana_ross">
-                  <div id="container" style="width:50%; height:400px;">
-                  <script>
-                  Highcharts.chart('container', {
-                    chart: {
-                        plotBackgroundColor: null,
-                        plotBorderWidth: 0,
-                        plotShadow: false
-                    },
-                    title: {
-                        text: 'Percentage<br>of song<br>that uses<br>sample',
-                        align: 'center',
-                        verticalAlign: 'middle',
-                        y: 40
-                    },
-                    tooltip: {
-                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                    },
-                    plotOptions: {
-                        pie: {
-                            dataLabels: {
-                                enabled: true,
-                                distance: -50,
-                                style: {
-                                    fontWeight: 'bold',
-                                    color: 'white'
-                                }
-                            },
-                            startAngle: -90,
-                            endAngle: 90,
-                            center: ['50%', '75%']
-                        }
-                    },
-                    series: [{
-                        type: 'pie',
-                        name: 'Sample appearance',
-                        innerSize: '50%',
-                        data: [
-                            ['Sample', 100],
-                        ]
-                    }]
-                });
-                  </script>
-                </div>
-
-                <div class="answer_audio">
-                  <audio controls preload="auto">
-                    <source src="audio/im_coming_out.mp3" type="audio/mp3">
-                  </audio>
-                </div>
               </div>
 
 
-
-              <div>
-                <label>What song is sampled in Notorious B.I.G.'s "Mo Money Mo Probelms" (1997)?</label>
-              </div>
-
-                <div class="form-check-label">
-                  <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> C.R.E.A.M. by Wu-Tang Clan (1993)</label>
+                <div>
+                  <label>What song is sampled in Notorious B.I.G.'s "Mo Money Mo Problems" (1997)?</label>
                 </div>
 
                 <div class="form-check-label">
-                  <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> It's Great to Be Here by The Jackson 5 (1971)</label>
+                  <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> Your Body's Callin' by R. Kelly (1993)</label>
                 </div>
 
                 <div class="form-check-label">
-                  <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> I'm Coming Out by Diana Ross (1980)</label>
+                  <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> C.R.E.A.M. by Wu-Tang Clan (1993) </label>
                 </div>
 
                 <div class="form-check-label">
-                  <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Your Body's Callin' by R. Kelly (1993)</label>
+                  <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> I'm Coming Out by Diana Ross (1980) </label>
                 </div>
 
-                <div id="form-group">
-                  <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-                  <button class="btn btn-default" type="reset" value="startover">Reset</button>
+                <div class="form-check-label">
+                  <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> It's Great to Be Here by The Jackson 5 (1971) </label>
                 </div>
               </div>
 
           <div class="question2">
-            <img id="wild_thoughts_img" class="albumart" src="images/wild_thoughts_img.jpg" alt="Wild Thoughts by DJ Khaled">
 
-            <div><label>What song is sampled in DJ Khaled's "Wild Thoughts ft. Rihanna and Bryson Tiller" (2017)?</label></div>
+            <div> <img id="wild_thoughts_img" class="albumart" src="images/wild_thoughts_img.jpg" alt="Wild Thoughts by DJ Khaled">
 
-            <div id="container2" style="width:100%; height:400px;">
+            <div id="question2">
+              <audio controls preload="auto">
+                <source src="audio/wild_thoughts.mp3" type="audio/mp3">
+              </audio>
+            </div>
+          </div>
+
+            <div id="container2" style="width:100%; height:400px;"></div>
+
             <script>
             Highcharts.chart('container2', {
               chart: {
@@ -164,19 +164,18 @@
                     }]
                   });
             </script>
-            </div>
 
             <div id="audioplayer">
-              <div class="question_audio">
-                <audio controls preload="auto">
-                  <source src="audio/wild_thoughts.mp3" type="audio/mp3">
-                </audio>
-              </div>
-              <div class="answer_audio">
+
+              <div id="answer2">
                 <audio controls preload="auto">
                   <source src="audio/maria_maria.mp3" type="audio/mp3">
                 </audio>
               </div>
+            </div>
+
+            <div>
+              <label>What song is sampled in DJ Khaled's "Wild Thoughts ft. Rihanna and Bryson Tiller" (2017)?</label>
             </div>
 
             <div class="form-check-label">
@@ -184,27 +183,22 @@
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Trust Issues by Drake (2011)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Money Ain't a Thang by Jermaine Dupri feat. Jay-Z (1998)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Wrong Answer</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Angel by Madonna (1984) </label>
             </div>
           </div>
 
           <div class="question3">
-            <img id="stan_img" class="albumart" src="images/stan_img.jpg" alt="Stan by Eminem">
+            <label>What song is sampled in Eminem's "Stan ft. Dido" (2000)?</label>
 
-            <div><label>What song is sampled in Eminem's "Stan ft. Dido" (2000)?</label></div>
+            <img id="stan_img" class="albumart" src="images/stan_img.jpg" alt="Stan by Eminem">
 
             <div id="container3" style="width:100%; height:400px;"></div>
 
@@ -251,11 +245,11 @@
             </script>
 
             <div id="audioplayer">
-              <div class="question_audio">
+              <div id="question3">
                 <audio controls preload="auto">
                   <source src="audio/stan.mp3" type="audio/mp3">
                 </audio>
-              <div class="answer_audio">
+              <div id="answer3">
                 <audio controls preload="auto">
                   <source src="audio/thank_you.mp3" type="audio/mp3">
                 </audio>
@@ -263,30 +257,26 @@
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> Thank You by Dido (1999)</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> (You Gotta) Fight for Your Right (To Party!) by Beastie Boys (1986)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Thank You by Dido (1999)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> When the Levee Breaks by Led Zeppelin (1971)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Wrong Answer</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Dream On by Aerosmith (1973)</label>
             </div>
           </div>
 
           <div class="question4">
+            <label>What song is sampled in Kendrick Lamar's "i" (2014)?</label>
+
             <img id="i_img" class="albumart" src="images/i_img.jpg" alt="i by Kendrick Lamar">
-            <div><label>What song is sampled in Kendrick Lamar's "i" (2014)?</label></div>
 
             <div id="container4" style="width:100%; height:400px;"></div>
 
@@ -333,12 +323,12 @@
             </script>
 
             <div id="audioplayer">
-              <div class="question_audio">
+              <div id="question4">
                 <audio controls preload="auto">
                   <source src="audio/i.mp3" type="audio/mp3">
                 </audio>
               </div>
-              <div class="answer_audio">
+              <div id="answer4">
                 <audio controls preload="auto">
                   <source src="audio/that_lady.mp3" type="audio/mp3">
                 </audio>
@@ -350,27 +340,22 @@
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Get Up Offa That Thing by James Brown (1976)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Any Time, Any Place by Janet Jackson (1993)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Wrong Answer</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Smooth Criminal by Michael Jackson (1987)</label>
             </div>
           </div>
 
           <div class="question5">
-            <img id="gold_digger_img" class="albumart" src="images/gold_digger_img.jpg" alt="Gold Digger by Kanye West">
+            <label>What song is sampled in Kanye West's "Gold Digger ft. Jamie Foxx" (2005)?</label>
 
-            <div><label>What song is sampled in Kanye West's "Gold Digger ft. Jamie Foxx" (2005)?</label></div>
+            <img id="gold_digger_img" class="albumart" src="images/gold_digger_img.jpg" alt="Gold Digger by Kanye West">
 
             <div id="container5" style="width:100%; height:400px;"></div>
 
@@ -417,11 +402,11 @@
             </script>
 
             <div id="audioplayer">
-              <div class="question_audio">
+              <div id="question5">
                 <audio controls preload="auto">
                   <source src="audio/gold_digger.mp3" type="audio/mp3">
                 </audio>
-                <div class="answer_audio">
+                <div id="answer5">
                   <audio controls preload="auto">
                     <source src="audio/ive_got_a_woman.mp3" type="audio/mp3">
                   </audio>
@@ -429,31 +414,26 @@
               </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> I've Got A Woman by Ray Charles (1954)</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> Victory by Puff Daddy feat. The Notorious B.I.G. and Busta Rhymes (1997)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Victory by Puff Daddy feat. The Notorious B.I.G. and Busta Rhymes (1997)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Sermon (He'll Give Us What We Really Need) by Holy Name of Mary Choral Family (1986)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Wrong Answer</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> I've Got A Woman by Ray Charles (1954)</label>
             </div>
           </div>
 
           <div class="question6">
-            <img id="you_and_i_img" class="albumart" src="images/you_and_i_img.jpg" alt="You and I by Lady Gaga">
+            <label>What song is sampled in Lady Gaga's "You and I" (2011)?</label>
 
-            <div><label>What song is sampled in Lady Gaga's "You and I" (2011)?</label></div>
+            <img id="you_and_i_img" class="albumart" src="images/you_and_i_img.jpg" alt="You and I by Lady Gaga">
 
             <div id="container6" style="width:100%; height:400px;"></div>
 
@@ -501,11 +481,11 @@
             </script>
 
             <div id="audioplayer">
-              <div class="question_audio">
+              <div id="question6">
                 <audio controls preload="auto">
                   <source src="audio/you_and_i.mp3" type="audio/mp3">
                 </audio>
-              <div class="answer_audio">
+              <div id="answer6">
                 <audio controls preload="auto">
                   <source src="audio/we_will_rock_you.mp3" type="audio/mp3">
                 </audio>
@@ -513,31 +493,26 @@
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> We Will Rock You by Queen (1977)</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> Out on the Weekend by Neil Young (1972)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Csárdás by Vittorio Monti (1904) </label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> We Will Rock You by Queen (1977) </label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Wrong Answer</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Ma Baker by Boney M. (1977)</label>
             </div>
           </div>
 
           <div class="question7">
-            <img id="paper_planes_img" class="albumart" src="images/paper_planes_img.jpg" alt="Paper Planes by M.I.A.">
+            <label>What song is sampled in M.I.A.'s "Paper Planes" (2007)?</label>
 
-            <div><label>What song is sampled in M.I.A.'s "Paper Planes" (2007)?</label></div>
+            <img id="paper_planes_img" class="albumart" src="images/paper_planes_img.jpg" alt="Paper Planes by M.I.A.">
 
             <div id="container7" style="width:100%; height:400px;"></div>
 
@@ -584,12 +559,12 @@
             </script>
 
             <div id="audioplayer">
-              <div class="question_audio">
+              <div id="question7">
                 <audio controls preload="auto">
                   <source src="audio/paper_planes.mp3" type="audio/mp3">
                 </audio>
               </div>
-              <div class="answer_audio">
+              <div id="answer7">
                 <audio controls preload="auto">
                   <source src="audio/straight_to_hell.mp3" type="audio/mp3">
                 </audio>
@@ -601,27 +576,22 @@
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Where Is My Mind? by Pixies (1988)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Lonely Star by The Weeknd (2011)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Wrong Answer</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Tour De France by Kraftwerk (1983)</label>
             </div>
           </div>
 
           <div class="question8">
-            <img id="umbrella_img" class="albumart" src="images/umbrella_img.jpg" alt="Umbrella by Rihanna">
+            <label>What song is sampled in Rihanna's "Umbrella ft. Jay-Z" (2007)?</label>
 
-            <div><label>What song is sampled in Rihanna's "Umbrella ft. Jay-Z" (2007)?</label></div>
+            <img id="umbrella_img" class="albumart" src="images/umbrella_img.jpg" alt="Umbrella by Rihanna">
 
             <div id="container8" style="width:100%; height:400px;"></div>
 
@@ -668,12 +638,12 @@
             </script>
 
             <div id="audioplayer">
-              <div class="question_audio">
+              <div id="question8">
                 <audio controls preload="auto">
                   <source src="audio/umbrella.mp3" type="audio/mp3">
                 </audio>
               </div>
-              <div class="answer_audio">
+              <div id="answer8">
                 <audio controls preload="auto">
                   <source src="audio/vintage_funk_kit_03.mp3" type="audio/mp3">
                 </audio>
@@ -681,31 +651,26 @@
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> Vintage Funk Kit by Apple Inc., Garage Band (2007)</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> Let's Go to Bed by The Cure (1983) </label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> I'm With You by Avril Lavigne (2002)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Vintage Funk Kit by Apple Inc., Garage Band (2007)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Wrong Answer</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Wanna Be Startin' Somethin' by Michael Jackson (1982)</label>
             </div>
           </div>
 
           <div class="question9">
-            <img id="come_together_img" class="albumart" src="images/come_together_img.jpg" alt="Come Together by The Beatles">
+            <label>What song is sampled in The Beatles' "Come Together" (1969)?</label>
 
-            <div><label>What song is sampled in The Beatles' "Come Together" (1969)?</label></div>
+            <img id="come_together_img" class="albumart" src="images/come_together_img.jpg" alt="Come Together by The Beatles">
 
             <div id="container9" style="width:100%; height:400px;"></div>
 
@@ -753,12 +718,12 @@
             </script>
 
             <div id="audioplayer">
-              <div class="question_audio">
+              <div id="question9">
                 <audio controls preload="auto">
                   <source src="audio/come_together.mp3" type="audio/mp3">
                 </audio>
               </div>
-              <div class="answer_audio">
+              <div id="answer9">
                 <audio controls preload="auto">
                   <source src="audio/you_cant_catch_me.mp3" type="audio/mp3">
                 </audio>
@@ -766,31 +731,26 @@
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> You Can't Catch Me by Chuck Barry (1956)</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> Baby Let's Play House by Elvis Presley (1955)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Moonlight Sonata by Ludwig Van Beethoven (1801)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> In the Mood by Glenn Miller (1939)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Wrong Answer</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> You Can't Catch Me by Chuck Barry (1956)</label>
             </div>
           </div>
 
           <div class="question10">
-            <img id="hotlinebling_img" class="albumart" src="images/hotlinebling_img.jpg" alt="Hotline Bling by Drake">
+            <label>What song is sampled in Drake's "Hotline Bling" (2015)?</label>
 
-            <div><label>What song is sampled in Drake's "Hotline Bling" (2015)?</label></div>
+            <img id="hotlinebling_img" class="albumart" src="images/hotlinebling_img.jpg" alt="Hotline Bling by Drake">
 
             <div id="container10" style="width:100%; height:400px;"></div>
 
@@ -837,11 +797,11 @@
             </script>
 
             <div id="audioplayer">
-              <div class="question_audio">
+              <div id="question10">
                 <audio controls preload="auto">
                   <source src="audio/hotline_bling.mp3" type="audio/mp3">
                 </audio>
-              <div class="answer_audio">
+              <div id="answer10">
                 <audio controls preload="auto">
                   <source src="audio/why_cant_we_live_together.mp3" type="audio/mp3">
                 </audio>
@@ -853,22 +813,26 @@
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Live @ Cutloose 2nd Birthday Party by Moodymann (2010)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Wrong Answer</label>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> If You Had My Love by Jennifer Lopez (1998)</label>
             </div>
 
             <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Wrong Answer</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
+              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Who U Wit? by Lil Jon and The East Side Boyz (1997)</label>
             </div>
           </div>
+
+          <!-- submit & reset -->
+              <div class="form-group">
+
+                <button class="btn btn-info" type="submit" value="Submit">Submit</button>
+
+                <button class="btn btn-danger" type="reset" value="startover">Start Over</button>
+
+              </div>
 
           <footer>
             <p><small>This page is an assignment for the University of Florida course, Introduction to Web Apps, by Mikaela Sheerin.</small></p>
@@ -885,9 +849,9 @@
     </div>
     <!-- end container -->
 
-    <script src="scripts/jquery-3.2.1.min.js"></script>
-    <script src="scripts/formscript.js"></script>
-
   </body>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/script.js"></script>
 
 </html>
