@@ -8,7 +8,7 @@ This week I had to rearrange some of the html in order to make the javascript ea
 
 Week 3
 
-This week I made everything work functionally, from hiding/showing the songs and their samples, to making the app show one question at a time. I did this all through hide/show functions on buttons. I also played with the css and bootstrap to get the form to look to my liking and made sure it was responsive on mobile (which bootstrap makes it easy to do). I'm mostly pleased with my project as of now, except for the colors. I think they are too bright but I was matching the colors of the theme. 
+This week I made everything work functionally, from hiding/showing the songs and their samples, to making the app show one question at a time. I did this all through hide/show functions on buttons. I also played with the css and bootstrap to get the form to look to my liking and made sure it was responsive on mobile (which bootstrap makes it easy to do). I'm mostly pleased with my project as of now, except for the colors. I think they are too bright but I was matching the colors of the theme. I only had an issue with one of the charts for the sample "We Will Rock You" by Queen and cannot figure why that HighChart won't load like the rest, as I didn't change anything. 
 
 Final summary of my project
 
