@@ -10,23 +10,24 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   <!-- CSS Files -->
   <link href="bootstrap-theme/assets/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="bootstrap-theme/assets/css/now-ui-kit.css?v=1.1.0" rel="stylesheet" />
+  <link href="bootstrap-theme/assets/css/now-ui-kit.css" rel="stylesheet" />
+  <link href="bootstrap-theme/assets/css/demo.css" rel="stylesheet" />
   <!-- highcharts -->
   <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/themes/default.js"></script>
 </head>
 
 <body>
   <div class="container">
     <div class="row">
       <div class="col-lg-9">
-
-        <h1>Would You Like a Sample?</h1>
-        <p>Information gathered from <a href="https://www.whosampled.com">WhoSampled.</a> All answers are songs that have been sampled by the artist at some point in time.</p>
+        <img id="header" src="images/header.jpg" alt="Mo Money Mo Problems by Notorious B.I.G.">
+        <p>Information gathered from <a href="https://www.whosampled.com" class="text-info">WhoSampled.</a> All answers are songs that have been sampled by the artist at some point in time.</p>
 
         <form>
 
           <div class="question1">
+            <div class="row">
+              <div class="col">
                 <div id="biggie">
                   <img id="mo_money_mo_problems_img" class="albumart" src="images/mo_money_mo_problems_img.jpg" alt="Mo Money Mo Problems by Notorious B.I.G.">
 
@@ -38,9 +39,134 @@
                 </div>
 
                 <div id="diana_ross">
-                  <div id="container" style="width:50%; height:400px;">
+                  <div class="chart" id="container1"></div>
+                    <script>
+                    function chart1() {
+                      var myChart = Highcharts.chart('container1', {
+                      chart: {
+                          plotBackgroundColor: null,
+                          plotBorderWidth: 0,
+                          plotShadow: false
+                      },
+                      title: {
+                          text: 'Percentage<br>of song<br>that uses<br>sample',
+                          align: 'center',
+                          verticalAlign: 'middle',
+                          y: 40
+                      },
+                      tooltip: {
+                          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                      },
+                      plotOptions: {
+                          pie: {
+                              dataLabels: {
+                                  enabled: true,
+                                  distance: -50,
+                                  style: {
+                                      fontWeight: 'bold',
+                                      color: 'white'
+                                  }
+                              },
+                              startAngle: -90,
+                              endAngle: 90,
+                              center: ['50%', '75%']
+                          }
+                      },
+                      series: [{
+                          type: 'pie',
+                          name: 'Sample appearance',
+                          innerSize: '50%',
+                          data: [
+                              ['Sample', 100],
+                          ]
+                        }]
+                      });
+                    } // note how function ends
+                    </script>
+
+                  <div class="answer_audio">
+                    <audio controls preload="auto">
+                      <source src="audio/im_coming_out.mp3" type="audio/mp3">
+                    </audio>
+                  </div>
+                </div>
+              </div>
+
+            <div class="col">
+              <div>
+                <label>What song is sampled in Notorious B.I.G.'s "Mo Money Mo Probelms" (1997)?</label>
+              </div>
+
+              <div class="wrong1">
+                <div class="radio">
+                  <input type="radio" name="radio1" id="radio1" value="option1">
+                  <label for="radio1">
+                    C.R.E.A.M. by Wu-Tang Clan (1993)
+                  </label>
+                </div>
+              </div>
+
+              <div class="wrong1">
+                <div class="radio">
+                  <input type="radio" name="radio1" id="radio2" value="option2">
+                  <label for="radio2">
+                    It's Great to Be Here by The Jackson 5 (1971)
+                  </label>
+                </div>
+              </div>
+
+              <div class="right1">
+                <div class="radio">
+                  <input type="radio" name="radio1" id="radio3" value="option3">
+                  <label for="radio3">
+                    I'm Coming Out by Diana Ross (1980)
+                  </label>
+                </div>
+              </div>
+
+              <div class="wrong1">
+                <div class="radio">
+                  <input type="radio" name="radio1" id="radio4" value="option4">
+                  <label for="radio4">
+                    Your Body's Callin' by R. Kelly (1993)
+                  </label>
+                </div>
+              </div>
+
+                <div class="button">
+                  <button id="submit1" class="btn btn-info" type="button" value="Submit">Submit</button>
+                  <button id= "reset1" class="btn btn-default" type="reset" value="startover">Reset</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="button">
+                  <button id= "next1" class="btn btn-primary" type="button" value="next">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="question2">
+            <div class="row">
+              <div class="col">
+                <div id="riri">
+                  <img id="wild_thoughts_img" class="albumart" src="images/wild_thoughts_img.jpg" alt="Wild Thoughts by DJ Khaled">
+
+                  <div class="question_audio">
+                    <audio controls preload="auto">
+                      <source src="audio/wild_thoughts.mp3" type="audio/mp3">
+                    </audio>
+                  </div>
+                </div>
+
+              <div id="maria">
+                <div class="chart" id="container2"></div>
                   <script>
-                  Highcharts.chart('container', {
+                  function chart2() {
+                    var myChart = Highcharts.chart('container2', {
                     chart: {
                         plotBackgroundColor: null,
                         plotBorderWidth: 0,
@@ -76,799 +202,1060 @@
                         innerSize: '50%',
                         data: [
                             ['Sample', 100],
-                        ]
-                    }]
-                });
+                            ]
+                          }]
+                        });
+                      }
                   </script>
-                </div>
 
-                <div class="answer_audio">
-                  <audio controls preload="auto">
-                    <source src="audio/im_coming_out.mp3" type="audio/mp3">
-                  </audio>
-                </div>
-              </div>
-
-
-
-              <div>
-                <label>What song is sampled in Notorious B.I.G.'s "Mo Money Mo Probelms" (1997)?</label>
-              </div>
-
-                <div class="form-check-label">
-                  <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> C.R.E.A.M. by Wu-Tang Clan (1993)</label>
-                </div>
-
-                <div class="form-check-label">
-                  <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> It's Great to Be Here by The Jackson 5 (1971)</label>
-                </div>
-
-                <div class="form-check-label">
-                  <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> I'm Coming Out by Diana Ross (1980)</label>
-                </div>
-
-                <div class="form-check-label">
-                  <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Your Body's Callin' by R. Kelly (1993)</label>
-                </div>
-
-                <div id="form-group">
-                  <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-                  <button class="btn btn-default" type="reset" value="startover">Reset</button>
+                  <div class="answer_audio">
+                    <audio controls preload="auto">
+                      <source src="audio/maria_maria.mp3" type="audio/mp3">
+                    </audio>
+                  </div>
                 </div>
               </div>
 
-          <div class="question2">
-            <img id="wild_thoughts_img" class="albumart" src="images/wild_thoughts_img.jpg" alt="Wild Thoughts by DJ Khaled">
+              <div class="col">
+                <div><label>What song is sampled in DJ Khaled's "Wild Thoughts ft. Rihanna and Bryson Tiller" (2017)?</label></div>
 
-            <div><label>What song is sampled in DJ Khaled's "Wild Thoughts ft. Rihanna and Bryson Tiller" (2017)?</label></div>
+                <div class="right2">
+                  <div class="radio">
+                    <input type="radio" name="radio2" id="radio1b" value="option1b">
+                    <label for="radio1b">
+                      Maria Maria by Carlos Santana (1999)
+                    </label>
+                  </div>
+                </div>
 
-            <div id="container2" style="width:100%; height:400px;">
-            <script>
-            Highcharts.chart('container2', {
-              chart: {
-                  plotBackgroundColor: null,
-                  plotBorderWidth: 0,
-                  plotShadow: false
-              },
-              title: {
-                  text: 'Percentage<br>of song<br>that uses<br>sample',
-                  align: 'center',
-                  verticalAlign: 'middle',
-                  y: 40
-              },
-              tooltip: {
-                  pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-              },
-              plotOptions: {
-                  pie: {
-                      dataLabels: {
-                          enabled: true,
-                          distance: -50,
-                          style: {
-                              fontWeight: 'bold',
-                              color: 'white'
-                          }
-                      },
-                      startAngle: -90,
-                      endAngle: 90,
-                      center: ['50%', '75%']
-                  }
-              },
-              series: [{
-                  type: 'pie',
-                  name: 'Sample appearance',
-                  innerSize: '50%',
-                  data: [
-                      ['Sample', 100],
-                      ]
-                    }]
-                  });
-            </script>
-            </div>
+                <div class="wrong2">
+                  <div class="radio">
+                    <input type="radio" name="radio2" id="radio2b" value="option2b">
+                    <label for="radio2b">
+                      Trust Issues by Drake (2011)
+                    </label>
+                  </div>
+                </div>
 
-            <div id="audioplayer">
-              <div class="question_audio">
-                <audio controls preload="auto">
-                  <source src="audio/wild_thoughts.mp3" type="audio/mp3">
-                </audio>
-              </div>
-              <div class="answer_audio">
-                <audio controls preload="auto">
-                  <source src="audio/maria_maria.mp3" type="audio/mp3">
-                </audio>
+                <div class="wrong2">
+                  <div class="radio">
+                    <input type="radio" name="radio2" id="radio3b" value="option3b">
+                    <label for="radio3b">
+                      Money Ain't a Thang by Jermaine Dupri feat. Jay-Z (1998)
+                    </label>
+                  </div>
+                </div>
+
+                <div class="wrong2">
+                  <div class="radio">
+                    <input type="radio" name="radio2" id="radio4b" value="option4b">
+                    <label for="radio4b">
+                      Angel by Madonna (1984)
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <button id="submit2" class="btn btn-info" type="button" value="Submit">Submit</button>
+                  <button id="reset2" class="btn btn-default" type="reset" value="startover">Reset</button>
+                </div>
               </div>
             </div>
 
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> Maria Maria by Carlos Santana (1999)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Trust Issues by Drake (2011)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Money Ain't a Thang by Jermaine Dupri feat. Jay-Z (1998)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Angel by Madonna (1984)</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
+            <div class="row">
+              <div class="col">
+                <div class="button">
+                  <button id="back2" class="btn btn-warning" type="button" value="back">Back</button>
+                  <button id= "next2" class="btn btn-primary" type="button" value="next">Next</button>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="question3">
-            <img id="stan_img" class="albumart" src="images/stan_img.jpg" alt="Stan by Eminem">
+            <div class="row">
+              <div class="col">
+                <div id="stan">
+                  <img id="stan_img" class="albumart" src="images/stan_img.jpg" alt="Stan by Eminem">
 
-            <div><label>What song is sampled in Eminem's "Stan ft. Dido" (2000)?</label></div>
+                  <div class="question_audio">
+                    <audio controls preload="auto">
+                      <source src="audio/stan.mp3" type="audio/mp3">
+                    </audio>
+                  </div>
+                </div>
 
-            <div id="container3" style="width:100%; height:400px;"></div>
+                <div id="dido">
+                  <div class="chart" id="container3"></div>
+                    <script>
+                    function chart3() {
+                      var myChart = Highcharts.chart('container3', {
+                    chart: {
+                        plotBackgroundColor: null,
+                        plotBorderWidth: 0,
+                        plotShadow: false
+                    },
+                    title: {
+                        text: 'Percentage<br>of song<br>that uses<br>sample',
+                        align: 'center',
+                        verticalAlign: 'middle',
+                        y: 40
+                    },
+                    tooltip: {
+                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                    },
+                    plotOptions: {
+                        pie: {
+                            dataLabels: {
+                                enabled: true,
+                                distance: -50,
+                                style: {
+                                    fontWeight: 'bold',
+                                    color: 'white'
+                                }
+                            },
+                            startAngle: -90,
+                            endAngle: 90,
+                            center: ['50%', '75%']
+                        }
+                    },
+                    series: [{
+                        type: 'pie',
+                        name: 'Sample appearance',
+                        innerSize: '50%',
+                        data: [
+                            ['Sample', 100],
+                            ]
+                          }]
+                        });
+                      }
+                  </script>
 
-            <script>
-            Highcharts.chart('container3', {
-              chart: {
-                  plotBackgroundColor: null,
-                  plotBorderWidth: 0,
-                  plotShadow: false
-              },
-              title: {
-                  text: 'Percentage<br>of song<br>that uses<br>sample',
-                  align: 'center',
-                  verticalAlign: 'middle',
-                  y: 40
-              },
-              tooltip: {
-                  pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-              },
-              plotOptions: {
-                  pie: {
-                      dataLabels: {
-                          enabled: true,
-                          distance: -50,
-                          style: {
-                              fontWeight: 'bold',
-                              color: 'white'
-                          }
-                      },
-                      startAngle: -90,
-                      endAngle: 90,
-                      center: ['50%', '75%']
-                  }
-              },
-              series: [{
-                  type: 'pie',
-                  name: 'Sample appearance',
-                  innerSize: '50%',
-                  data: [
-                      ['Sample', 100],
-                      ]
-                    }]
-                  });
-            </script>
+                  <div class="answer_audio">
+                    <audio controls preload="auto">
+                      <source src="audio/thank_you.mp3" type="audio/mp3">
+                    </audio>
+                  </div>
+                </div>
+              </div>
 
-            <div id="audioplayer">
-              <div class="question_audio">
-                <audio controls preload="auto">
-                  <source src="audio/stan.mp3" type="audio/mp3">
-                </audio>
-              <div class="answer_audio">
-                <audio controls preload="auto">
-                  <source src="audio/thank_you.mp3" type="audio/mp3">
-                </audio>
+              <div class="col">
+                <div><label>What song is sampled in Eminem's "Stan ft. Dido" (2000)?</label></div>
+
+              <div class="wrong3">
+                <div class="radio">
+                  <input type="radio" name="radio3" id="radio1c" value="option1c">
+                  <label for="radio1c">
+                    (You Gotta) Fight for Your Right (To Party!) by Beastie Boys (1986)
+                  </label>
+                </div>
+              </div>
+
+              <div class="wrong3">
+                <div class="radio">
+                  <input type="radio" name="radio3" id="radio2c" value="option2c">
+                  <label for="radio2c">
+                    When the Levee Breaks by Led Zeppelin (1971)
+                  </label>
+                </div>
+              </div>
+
+              <div class="right3">
+                <div class="radio">
+                  <input type="radio" name="radio3" id="radio3c" value="option3c">
+                  <label for="radio3c">
+                    Thank You by Dido (1999)
+                  </label>
+                </div>
+              </div>
+
+              <div class="wrong3">
+                <div class="radio">
+                  <input type="radio" name="radio3" id="radio4c" value="option4c">
+                  <label for="radio4c">
+                    Dream On by Aerosmith (1973)
+                  </label>
+                </div>
+              </div>
+
+                <div class="form-group">
+                  <button id="submit3" class="btn btn-info" type="button" value="Submit">Submit</button>
+                  <button id="reset3" class="btn btn-default" type="reset" value="startover">Reset</button>
+                </div>
               </div>
             </div>
 
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> (You Gotta) Fight for Your Right (To Party!) by Beastie Boys (1986)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> When the Levee Breaks by Led Zeppelin (1971)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Thank You by Dido (1999)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Dream On by Aerosmith (1973)</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
+            <div class="row">
+              <div class="col">
+                <div class="button">
+                  <button id="back3" class="btn btn-warning" type="button" value="back">Back</button>
+                  <button id= "next3" class="btn btn-primary" type="button" value="next">Next</button>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="question4">
-            <img id="i_img" class="albumart" src="images/i_img.jpg" alt="i by Kendrick Lamar">
-            <div><label>What song is sampled in Kendrick Lamar's "i" (2014)?</label></div>
+            <div class="row">
+              <div class="col">
+                <div id="i">
+                  <img id="i_img" class="albumart" src="images/i_img.jpg" alt="i by Kendrick Lamar">
 
-            <div id="container4" style="width:100%; height:400px;"></div>
+                  <div class="question_audio">
+                    <audio controls preload="auto">
+                      <source src="audio/i.mp3" type="audio/mp3">
+                    </audio>
+                  </div>
+                </div>
 
-            <script>
-            Highcharts.chart('container4', {
-              chart: {
-                  plotBackgroundColor: null,
-                  plotBorderWidth: 0,
-                  plotShadow: false
-              },
-              title: {
-                  text: 'Percentage<br>of song<br>that uses<br>sample',
-                  align: 'center',
-                  verticalAlign: 'middle',
-                  y: 40
-              },
-              tooltip: {
-                  pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-              },
-              plotOptions: {
-                  pie: {
-                      dataLabels: {
-                          enabled: true,
-                          distance: -50,
-                          style: {
-                              fontWeight: 'bold',
-                              color: 'white'
+                <div id="that_lady">
+                  <div class="chart" id="container4"></div>
+                    <script>
+                    function chart4() {
+                      var myChart = Highcharts.chart('container4', {
+                      chart: {
+                          plotBackgroundColor: null,
+                          plotBorderWidth: 0,
+                          plotShadow: false
+                      },
+                      title: {
+                          text: 'Percentage<br>of song<br>that uses<br>sample',
+                          align: 'center',
+                          verticalAlign: 'middle',
+                          y: 40
+                      },
+                      tooltip: {
+                          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                      },
+                      plotOptions: {
+                          pie: {
+                              dataLabels: {
+                                  enabled: true,
+                                  distance: -50,
+                                  style: {
+                                      fontWeight: 'bold',
+                                      color: 'white'
+                                  }
+                              },
+                              startAngle: -90,
+                              endAngle: 90,
+                              center: ['50%', '75%']
                           }
                       },
-                      startAngle: -90,
-                      endAngle: 90,
-                      center: ['50%', '75%']
-                  }
-              },
-              series: [{
-                  type: 'pie',
-                  name: 'Sample appearance',
-                  innerSize: '50%',
-                  data: [
-                      ['Sample', 100],
-                      ]
-                    }]
-                  });
-            </script>
+                      series: [{
+                          type: 'pie',
+                          name: 'Sample appearance',
+                          innerSize: '50%',
+                          data: [
+                              ['Sample', 100],
+                              ]
+                            }]
+                          });
+                        }
+                    </script>
 
-            <div id="audioplayer">
-              <div class="question_audio">
-                <audio controls preload="auto">
-                  <source src="audio/i.mp3" type="audio/mp3">
-                </audio>
-              </div>
-              <div class="answer_audio">
-                <audio controls preload="auto">
-                  <source src="audio/that_lady.mp3" type="audio/mp3">
-                </audio>
-              </div>
-            </div>
+                    <div class="answer_audio">
+                      <audio controls preload="auto">
+                        <source src="audio/that_lady.mp3" type="audio/mp3">
+                      </audio>
+                    </div>
+                  </div>
+                </div>
 
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> That Lady by Isley Brothers (1973)</label>
-            </div>
+                <div class="col">
+                  <div><label>What song is sampled in Kendrick Lamar's "i" (2014)?</label></div>
 
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Get Up Offa That Thing by James Brown (1976)</label>
-            </div>
+                <div class="right4">
+                  <div class="radio">
+                    <input type="radio" name="radio4" id="radio1d" value="option1d">
+                    <label for="radio1d">
+                      That Lady by Isley Brothers (1973)
+                    </label>
+                  </div>
+                </div>
 
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Any Time, Any Place by Janet Jackson (1993)</label>
-            </div>
+                <div class="wrong4">
+                  <div class="radio">
+                    <input type="radio" name="radio4" id="radio2d" value="option2d">
+                    <label for="radio2d">
+                      Get Up Offa That Thing by James Brown (1976)
+                    </label>
+                  </div>
+                </div>
 
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Smooth Criminal by Michael Jackson (1987)</label>
-            </div>
+                <div class="wrong4">
+                  <div class="radio">
+                    <input type="radio" name="radio4" id="radio3d" value="option3d">
+                    <label for="radio3d">
+                      Any Time, Any Place by Janet Jackson (1993)
+                    </label>
+                  </div>
+                </div>
 
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
-            </div>
-          </div>
+                <div class="wrong4">
+                  <div class="radio">
+                    <input type="radio" name="radio4" id="radio4d" value="option4d">
+                    <label for="radio4d">
+                      Smooth Criminal by Michael Jackson (1987)
+                    </label>
+                  </div>
+                </div>
 
-          <div class="question5">
-            <img id="gold_digger_img" class="albumart" src="images/gold_digger_img.jpg" alt="Gold Digger by Kanye West">
-
-            <div><label>What song is sampled in Kanye West's "Gold Digger ft. Jamie Foxx" (2005)?</label></div>
-
-            <div id="container5" style="width:100%; height:400px;"></div>
-
-            <script>
-            Highcharts.chart('container5', {
-              chart: {
-                  plotBackgroundColor: null,
-                  plotBorderWidth: 0,
-                  plotShadow: false
-              },
-              title: {
-                  text: 'Percentage<br>of song<br>that uses<br>sample',
-                  align: 'center',
-                  verticalAlign: 'middle',
-                  y: 40
-              },
-              tooltip: {
-                  pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-              },
-              plotOptions: {
-                  pie: {
-                      dataLabels: {
-                          enabled: true,
-                          distance: -50,
-                          style: {
-                              fontWeight: 'bold',
-                              color: 'white'
-                          }
-                      },
-                      startAngle: -90,
-                      endAngle: 90,
-                      center: ['50%', '75%']
-                  }
-              },
-              series: [{
-                  type: 'pie',
-                  name: 'Sample appearance',
-                  innerSize: '50%',
-                  data: [
-                      ['Sample', 100],
-                      ]
-                    }]
-                  });
-            </script>
-
-            <div id="audioplayer">
-              <div class="question_audio">
-                <audio controls preload="auto">
-                  <source src="audio/gold_digger.mp3" type="audio/mp3">
-                </audio>
-                <div class="answer_audio">
-                  <audio controls preload="auto">
-                    <source src="audio/ive_got_a_woman.mp3" type="audio/mp3">
-                  </audio>
+                  <div class="form-group">
+                    <button id="submit4" class="btn btn-info" type="button" value="Submit">Submit</button>
+                    <button id="reset4" class="btn btn-default" type="reset" value="startover">Reset</button>
+                  </div>
                 </div>
               </div>
 
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> Sermon (He'll Give Us What We Really Need) by Holy Name of Mary Choral Family (1986)</label>
+              <div class="row">
+                <div class="col">
+                  <div class="button">
+                    <button id="back4" class="btn btn-warning" type="button" value="back">Back</button>
+                    <button id= "next4" class="btn btn-primary" type="button" value="next">Next</button>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Victory by Puff Daddy feat. The Notorious B.I.G. and Busta Rhymes (1997)</label>
+          <div class="question5">
+            <div class="row">
+              <div class="col">
+                <div id="kanye">
+                  <img id="gold_digger_img" class="albumart" src="images/gold_digger_img.jpg" alt="Gold Digger by Kanye West">
+
+                  <div class="question_audio">
+                    <audio controls preload="auto">
+                      <source src="audio/gold_digger.mp3" type="audio/mp3">
+                    </audio>
+                  </div>
+                </div>
+
+                <div id="ive_got_a_woman">
+                  <div class="chart" id="container5"></div>
+                    <script>
+                    function chart5() {
+                      var myChart = Highcharts.chart('container5', {
+                      chart: {
+                          plotBackgroundColor: null,
+                          plotBorderWidth: 0,
+                          plotShadow: false
+                      },
+                      title: {
+                          text: 'Percentage<br>of song<br>that uses<br>sample',
+                          align: 'center',
+                          verticalAlign: 'middle',
+                          y: 40
+                      },
+                      tooltip: {
+                          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                      },
+                      plotOptions: {
+                          pie: {
+                              dataLabels: {
+                                  enabled: true,
+                                  distance: -50,
+                                  style: {
+                                      fontWeight: 'bold',
+                                      color: 'white'
+                                  }
+                              },
+                              startAngle: -90,
+                              endAngle: 90,
+                              center: ['50%', '75%']
+                          }
+                      },
+                      series: [{
+                          type: 'pie',
+                          name: 'Sample appearance',
+                          innerSize: '50%',
+                          data: [
+                              ['Sample', 100],
+                              ]
+                            }]
+                          });
+                        }
+                    </script>
+
+                    <div class="answer_audio">
+                      <audio controls preload="auto">
+                        <source src="audio/ive_got_a_woman.mp3" type="audio/mp3">
+                      </audio>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div><label>What song is sampled in Kanye West's "Gold Digger ft. Jamie Foxx" (2005)?</label></div>
+
+                <div class="wrong5">
+                  <div class="radio">
+                    <input type="radio" name="radio5" id="radio1e" value="option1e">
+                    <label for="radio1e">
+                      Sermon (He'll Give Us What We Really Need) by Holy Name of Mary Choral Family (1986)
+                    </label>
+                  </div>
+                </div>
+
+                <div class="wrong5">
+                  <div class="radio">
+                    <input type="radio" name="radio5" id="radio2e" value="option2e">
+                    <label for="radio2e">
+                      Victory by Puff Daddy feat. The Notorious B.I.G. and Busta Rhymes (1997)
+                    </label>
+                  </div>
+                </div>
+
+                <div class="wrong5">
+                  <div class="radio">
+                    <input type="radio" name="radio5" id="radio3e" value="option3e">
+                    <label for="radio3e">
+                      Don't Tell a Lie About Me and I Won't Tell the Truth on You by James Brown (1974)
+                    </label>
+                  </div>
+                </div>
+
+                <div class="right5">
+                  <div class="radio">
+                    <input type="radio" name="radio5" id="radio4e" value="option4e">
+                    <label for="radio4e">
+                      I've Got A Woman by Ray Charles (1954)
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <button id="submit5" class="btn btn-info" type="button" value="Submit">Submit</button>
+                  <button id="reset5" class="btn btn-default" type="reset" value="startover">Reset</button>
+                </div>
+              </div>
             </div>
 
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Don't Tell a Lie About Me and I Won't Tell the Truth on You by James Brown (1974)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> I've Got A Woman by Ray Charles (1954)</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
+            <div class="row">
+              <div class="col">
+                <div class="button">
+                  <button id="back5" class="btn btn-warning" type="button" value="back">Back</button>
+                  <button id= "next5" class="btn btn-primary" type="button" value="next">Next</button>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="question6">
-            <img id="you_and_i_img" class="albumart" src="images/you_and_i_img.jpg" alt="You and I by Lady Gaga">
+            <div class="row">
+              <div class="col">
+                <div id="you_and_i">
+                  <img id="you_and_i_img" class="albumart" src="images/you_and_i_img.jpg" alt="You and I by Lady Gaga">
 
-            <div><label>What song is sampled in Lady Gaga's "You and I" (2011)?</label></div>
+                  <div class="question_audio">
+                    <audio controls preload="auto">
+                      <source src="audio/you_and_i.mp3" type="audio/mp3">
+                    </audio>
+                  </div>
+                </div>
 
-            <div id="container6" style="width:100%; height:400px;"></div>
-
-            <script>
-            Highcharts.chart('container6', {
-              chart: {
-                  plotBackgroundColor: null,
-                  plotBorderWidth: 0,
-                  plotShadow: false
-              },
-              title: {
-                  text: 'Percentage<br>of song<br>that uses<br>sample',
-                  align: 'center',
-                  verticalAlign: 'middle',
-                  y: 40
-              },
-              tooltip: {
-                  pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-              },
-              plotOptions: {
-                  pie: {
-                      dataLabels: {
-                          enabled: true,
-                          distance: -50,
-                          style: {
-                              fontWeight: 'bold',
-                              color: 'white'
+                <div id="queen">
+                  <div class="chart" id="container6"></div>
+                    <script>
+                    function chart6() {
+                      var myChart = Highcharts.chart('container6', {
+                      chart: {
+                          plotBackgroundColor: null,
+                          plotBorderWidth: 0,
+                          plotShadow: false
+                      },
+                      title: {
+                          text: 'Percentage<br>of song<br>that uses<br>sample',
+                          align: 'center',
+                          verticalAlign: 'middle',
+                          y: 40
+                      },
+                      tooltip: {
+                          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                      },
+                      plotOptions: {
+                          pie: {
+                              dataLabels: {
+                                  enabled: true,
+                                  distance: -50,
+                                  style: {
+                                      fontWeight: 'bold',
+                                      color: 'white'
+                                  }
+                              },
+                              startAngle: -90,
+                              endAngle: 90,
+                              center: ['50%', '75%']
                           }
                       },
-                      startAngle: -90,
-                      endAngle: 90,
-                      center: ['50%', '75%']
-                  }
-              },
-              series: [{
-                  type: 'pie',
-                  name: 'Sample appearance',
-                  innerSize: '50%',
-                  data: [
-                      ['Sample', 77],
-                      ['Song Without Sample', 33],
-                      ]
-                    }]
-                  });
-            </script>
+                      series: [{
+                          type: 'pie',
+                          name: 'Sample appearance',
+                          innerSize: '50%',
+                          data: [
+                              ['Sample', 77],
+                              ['Song Without Sample', 33],
+                              ]
+                            }]
+                          });
+                        }
+                    </script>
 
-            <div id="audioplayer">
-              <div class="question_audio">
-                <audio controls preload="auto">
-                  <source src="audio/you_and_i.mp3" type="audio/mp3">
-                </audio>
-              <div class="answer_audio">
-                <audio controls preload="auto">
-                  <source src="audio/we_will_rock_you.mp3" type="audio/mp3">
-                </audio>
+                      <div class="answer_audio">
+                        <audio controls preload="auto">
+                          <source src="audio/we_will_rock_you.mp3" type="audio/mp3">
+                        </audio>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div><label>What song is sampled in Lady Gaga's "You and I" (2011)?</label></div>
+
+                  <div class="wrong6">
+                    <div class="radio">
+                      <input type="radio" name="radio6" id="radio1f" value="option1f">
+                      <label for="radio1f">
+                        Csárdás by Vittorio Monti (1904)
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="right6">
+                    <div class="radio">
+                      <input type="radio" name="radio6" id="radio2f" value="option2f">
+                      <label for="radio2f">
+                        We Will Rock You by Queen (1977)
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="wrong6">
+                    <div class="radio">
+                      <input type="radio" name="radio6" id="radio3f" value="option3f">
+                      <label for="radio3f">
+                        Ma Baker by Boney M. (1977)
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="wrong6">
+                    <div class="radio">
+                      <input type="radio" name="radio6" id="radio4f" value="option4f">
+                      <label for="radio4f">
+                        Out on the Weekend by Neil Young (1972)
+                      </label>
+                    </div>
+                  </div>
+
+                    <div class="form-group">
+                      <button id="submit6" class="btn btn-info" type="button" value="Submit">Submit</button>
+                      <button id="reset6" class="btn btn-default" type="reset" value="startover">Reset</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <div class="button">
+                      <button id="back6" class="btn btn-warning" type="button" value="back">Back</button>
+                      <button id= "next6" class="btn btn-primary" type="button" value="next">Next</button>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> Out on the Weekend by Neil Young (1972)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Csárdás by Vittorio Monti (1904)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> We Will Rock You by Queen (1977)/label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Ma Baker by Boney M. (1977)</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
-            </div>
-          </div>
 
           <div class="question7">
-            <img id="paper_planes_img" class="albumart" src="images/paper_planes_img.jpg" alt="Paper Planes by M.I.A.">
+            <div class="row">
+              <div class="col">
+                <div id="mia">
+                  <img id="paper_planes_img" class="albumart" src="images/paper_planes_img.jpg" alt="Paper Planes by M.I.A.">
 
-            <div><label>What song is sampled in M.I.A.'s "Paper Planes" (2007)?</label></div>
+                  <div class="question_audio">
+                    <audio controls preload="auto">
+                      <source src="audio/paper_planes.mp3" type="audio/mp3">
+                    </audio>
+                  </div>
+                </div>
 
-            <div id="container7" style="width:100%; height:400px;"></div>
-
-            <script>
-            Highcharts.chart('container7', {
-              chart: {
-                  plotBackgroundColor: null,
-                  plotBorderWidth: 0,
-                  plotShadow: false
-              },
-              title: {
-                  text: 'Percentage<br>of song<br>that uses<br>sample',
-                  align: 'center',
-                  verticalAlign: 'middle',
-                  y: 40
-              },
-              tooltip: {
-                  pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-              },
-              plotOptions: {
-                  pie: {
-                      dataLabels: {
-                          enabled: true,
-                          distance: -50,
-                          style: {
-                              fontWeight: 'bold',
-                              color: 'white'
+                <div id="the_clash">
+                  <div class="chart" id="container7"></div>
+                    <script>
+                    function chart7() {
+                      var myChart = Highcharts.chart('container7', {
+                      chart: {
+                          plotBackgroundColor: null,
+                          plotBorderWidth: 0,
+                          plotShadow: false
+                      },
+                      title: {
+                          text: 'Percentage<br>of song<br>that uses<br>sample',
+                          align: 'center',
+                          verticalAlign: 'middle',
+                          y: 40
+                      },
+                      tooltip: {
+                          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                      },
+                      plotOptions: {
+                          pie: {
+                              dataLabels: {
+                                  enabled: true,
+                                  distance: -50,
+                                  style: {
+                                      fontWeight: 'bold',
+                                      color: 'white'
+                                  }
+                              },
+                              startAngle: -90,
+                              endAngle: 90,
+                              center: ['50%', '75%']
                           }
                       },
-                      startAngle: -90,
-                      endAngle: 90,
-                      center: ['50%', '75%']
-                  }
-              },
-              series: [{
-                  type: 'pie',
-                  name: 'Sample appearance',
-                  innerSize: '50%',
-                  data: [
-                      ['Sample', 100],
-                      ]
-                    }]
-                  });
-            </script>
+                      series: [{
+                          type: 'pie',
+                          name: 'Sample appearance',
+                          innerSize: '50%',
+                          data: [
+                              ['Sample', 100],
+                              ]
+                            }]
+                          });
+                        }
+                    </script>
 
-            <div id="audioplayer">
-              <div class="question_audio">
-                <audio controls preload="auto">
-                  <source src="audio/paper_planes.mp3" type="audio/mp3">
-                </audio>
-              </div>
-              <div class="answer_audio">
-                <audio controls preload="auto">
-                  <source src="audio/straight_to_hell.mp3" type="audio/mp3">
-                </audio>
+                    <div class="answer_audio">
+                      <audio controls preload="auto">
+                        <source src="audio/straight_to_hell.mp3" type="audio/mp3">
+                      </audio>
+                    </div>
+                  </div>
                 </div>
-            </div>
 
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> Straight to Hell by The Clash (1982)</label>
-            </div>
+                <div class="col">
+                  <div><label>What song is sampled in M.I.A.'s "Paper Planes" (2007)?</label></div>
 
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Where Is My Mind? by Pixies (1988)</label>
-            </div>
+                  <div class="right7">
+                    <div class="radio">
+                      <input type="radio" name="radio7" id="radio1g" value="option1g">
+                      <label for="radio1g">
+                        Straight to Hell by The Clash (1982)
+                      </label>
+                    </div>
+                  </div>
 
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Lonely Star by The Weeknd (2011)</label>
-            </div>
+                  <div class="wrong7">
+                    <div class="radio">
+                      <input type="radio" name="radio7" id="radio2g" value="option2g">
+                      <label for="radio2g">
+                        Where Is My Mind? by Pixies (1988)
+                      </label>
+                    </div>
+                  </div>
 
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Tour De France by Kraftwerk (1983)</label>
-            </div>
+                  <div class="wrong7">
+                    <div class="radio">
+                      <input type="radio" name="radio7" id="radio3g" value="option3g">
+                      <label for="radio3g">
+                        Lonely Star by The Weeknd (2011)
+                      </label>
+                    </div>
+                  </div>
 
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
-            </div>
-          </div>
+                  <div class="wrong7">
+                    <div class="radio">
+                      <input type="radio" name="radio7" id="radio4g" value="option4g">
+                      <label for="radio4g">
+                        Tour De France by Kraftwerk (1983)
+                      </label>
+                    </div>
+                  </div>
+
+                    <div class="form-group">
+                      <button id="submit7" class="btn btn-info" type="button" value="Submit">Submit</button>
+                      <button id="reset7" class="btn btn-default" type="reset" value="startover">Reset</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <div class="button">
+                      <button id="back7" class="btn btn-warning" type="button" value="back">Back</button>
+                      <button id= "next7" class="btn btn-primary" type="button" value="next">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
           <div class="question8">
-            <img id="umbrella_img" class="albumart" src="images/umbrella_img.jpg" alt="Umbrella by Rihanna">
+            <div class="row">
+              <div class="col">
+                <div id="umbrella">
+                  <img id="umbrella_img" class="albumart" src="images/umbrella_img.jpg" alt="Umbrella by Rihanna">
 
-            <div><label>What song is sampled in Rihanna's "Umbrella ft. Jay-Z" (2007)?</label></div>
+                  <div class="question_audio">
+                    <audio controls preload="auto">
+                      <source src="audio/umbrella.mp3" type="audio/mp3">
+                    </audio>
+                  </div>
+                </div>
 
-            <div id="container8" style="width:100%; height:400px;"></div>
-
-            <script>
-            Highcharts.chart('container8', {
-              chart: {
-                  plotBackgroundColor: null,
-                  plotBorderWidth: 0,
-                  plotShadow: false
-              },
-              title: {
-                  text: 'Percentage<br>of song<br>that uses<br>sample',
-                  align: 'center',
-                  verticalAlign: 'middle',
-                  y: 40
-              },
-              tooltip: {
-                  pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-              },
-              plotOptions: {
-                  pie: {
-                      dataLabels: {
-                          enabled: true,
-                          distance: -50,
-                          style: {
-                              fontWeight: 'bold',
-                              color: 'white'
+                <div id="garage_band">
+                  <div class="chart" id="container8"></div>
+                    <script>
+                    function chart8() {
+                      var myChart = Highcharts.chart('container8', {
+                      chart: {
+                          plotBackgroundColor: null,
+                          plotBorderWidth: 0,
+                          plotShadow: false
+                      },
+                      title: {
+                          text: 'Percentage<br>of song<br>that uses<br>sample',
+                          align: 'center',
+                          verticalAlign: 'middle',
+                          y: 40
+                      },
+                      tooltip: {
+                          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                      },
+                      plotOptions: {
+                          pie: {
+                              dataLabels: {
+                                  enabled: true,
+                                  distance: -50,
+                                  style: {
+                                      fontWeight: 'bold',
+                                      color: 'white'
+                                  }
+                              },
+                              startAngle: -90,
+                              endAngle: 90,
+                              center: ['50%', '75%']
                           }
                       },
-                      startAngle: -90,
-                      endAngle: 90,
-                      center: ['50%', '75%']
-                  }
-              },
-              series: [{
-                  type: 'pie',
-                  name: 'Sample appearance',
-                  innerSize: '50%',
-                  data: [
-                      ['Sample', 100],
-                      ]
-                    }]
-                  });
-            </script>
+                      series: [{
+                          type: 'pie',
+                          name: 'Sample appearance',
+                          innerSize: '50%',
+                          data: [
+                              ['Sample', 100],
+                              ]
+                            }]
+                          });
+                        }
+                    </script>
 
-            <div id="audioplayer">
-              <div class="question_audio">
-                <audio controls preload="auto">
-                  <source src="audio/umbrella.mp3" type="audio/mp3">
-                </audio>
+                    <div class="answer_audio">
+                      <audio controls preload="auto">
+                        <source src="audio/vintage_funk_kit_03.mp3" type="audio/mp3">
+                      </audio>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div><label>What song is sampled in Rihanna's "Umbrella ft. Jay-Z" (2007)?</label></div>
+
+                  <div class="wrong8">
+                    <div class="radio">
+                      <input type="radio" name="radio8" id="radio1h" value="option1h">
+                      <label for="radio1h">
+                        Let's Go to Bed by The Cure (1983)
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="wrong8">
+                    <div class="radio">
+                      <input type="radio" name="radio8" id="radio2h" value="option2h">
+                      <label for="radio2h">
+                        I'm With You by Avril Lavigne (2002)
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="right8">
+                    <div class="radio">
+                      <input type="radio" name="radio8" id="radio3h" value="option3h">
+                      <label for="radio3h">
+                        Vintage Funk Kit by Apple Inc., Garage Band (2007)
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="wrong8">
+                    <div class="radio">
+                      <input type="radio" name="radio8" id="radio4h" value="option4h">
+                      <label for="radio4h">
+                        Wanna Be Startin' Somethin' by Michael Jackson (1982)
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <button id="submit8" class="btn btn-info" type="button" value="Submit">Submit</button>
+                    <button id="reset8" class="btn btn-default" type="reset" value="startover">Reset</button>
+                  </div>
+                </div>
               </div>
-              <div class="answer_audio">
-                <audio controls preload="auto">
-                  <source src="audio/vintage_funk_kit_03.mp3" type="audio/mp3">
-                </audio>
+
+              <div class="row">
+                <div class="col">
+                  <div class="button">
+                    <button id="back8" class="btn btn-warning" type="button" value="back">Back</button>
+                    <button id= "next8" class="btn btn-primary" type="button" value="next">Next</button>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> Let's Go to Bed by The Cure (1983)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> I'm With You by Avril Lavigne (2002)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> Vintage Funk Kit by Apple Inc., Garage Band (2007)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Wanna Be Startin' Somethin' by Michael Jackson (1982)</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
-            </div>
-          </div>
 
           <div class="question9">
-            <img id="come_together_img" class="albumart" src="images/come_together_img.jpg" alt="Come Together by The Beatles">
+            <div class="row">
+              <div class="col">
+                <div id="beatles">
+                  <img id="come_together_img" class="albumart" src="images/come_together_img.jpg" alt="Come Together by The Beatles">
 
-            <div><label>What song is sampled in The Beatles' "Come Together" (1969)?</label></div>
+                  <div class="question_audio">
+                    <audio controls preload="auto">
+                      <source src="audio/come_together.mp3" type="audio/mp3">
+                    </audio>
+                  </div>
+                </div>
 
-            <div id="container9" style="width:100%; height:400px;"></div>
-
-            <script>
-            Highcharts.chart('container9', {
-              chart: {
-                  plotBackgroundColor: null,
-                  plotBorderWidth: 0,
-                  plotShadow: false
-              },
-              title: {
-                  text: 'Percentage<br>of song<br>that uses<br>sample',
-                  align: 'center',
-                  verticalAlign: 'middle',
-                  y: 40
-              },
-              tooltip: {
-                  pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-              },
-              plotOptions: {
-                  pie: {
-                      dataLabels: {
-                          enabled: true,
-                          distance: -50,
-                          style: {
-                              fontWeight: 'bold',
-                              color: 'white'
+                <div id="chuck_berry">
+                  <div class="chart" id="container9"></div>
+                    <script>
+                    function chart9() {
+                      var myChart = Highcharts.chart('container9', {
+                      chart: {
+                          plotBackgroundColor: null,
+                          plotBorderWidth: 0,
+                          plotShadow: false
+                      },
+                      title: {
+                          text: 'Percentage<br>of song<br>that uses<br>sample',
+                          align: 'center',
+                          verticalAlign: 'middle',
+                          y: 40
+                      },
+                      tooltip: {
+                          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                      },
+                      plotOptions: {
+                          pie: {
+                              dataLabels: {
+                                  enabled: true,
+                                  distance: -50,
+                                  style: {
+                                      fontWeight: 'bold',
+                                      color: 'white'
+                                  }
+                              },
+                              startAngle: -90,
+                              endAngle: 90,
+                              center: ['50%', '75%']
                           }
                       },
-                      startAngle: -90,
-                      endAngle: 90,
-                      center: ['50%', '75%']
-                  }
-              },
-              series: [{
-                  type: 'pie',
-                  name: 'Sample appearance',
-                  innerSize: '50%',
-                  data: [
-                      ['Sample', 34],
-                      ['Song Without Sample', 66],
-                      ]
-                    }]
-                  });
-            </script>
+                      series: [{
+                          type: 'pie',
+                          name: 'Sample appearance',
+                          innerSize: '50%',
+                          data: [
+                              ['Sample', 34],
+                              ['Song Without Sample', 66],
+                              ]
+                            }]
+                          });
+                        }
+                    </script>
 
-            <div id="audioplayer">
-              <div class="question_audio">
-                <audio controls preload="auto">
-                  <source src="audio/come_together.mp3" type="audio/mp3">
-                </audio>
+                    <div class="answer_audio">
+                      <audio controls preload="auto">
+                        <source src="audio/you_cant_catch_me.mp3" type="audio/mp3">
+                      </audio>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div><label>What song is sampled in The Beatles' "Come Together" (1969)?</label></div>
+
+                <div class="wrong9">
+                  <div class="radio">
+                    <input type="radio" name="radio9" id="radio1i" value="option1i">
+                    <label for="radio1i">
+                      Baby Let's Play House by Elvis Presley (1955)
+                    </label>
+                  </div>
+                </div>
+
+                <div class="wrong9">
+                  <div class="radio">
+                    <input type="radio" name="radio9" id="radio2i" value="option2i">
+                    <label for="radio2i">
+                      Moonlight Sonata by Ludwig Van Beethoven (1801)
+                    </label>
+                  </div>
+                </div>
+
+                <div class="wrong9">
+                  <div class="radio">
+                    <input type="radio" name="radio9" id="radio3i" value="option3i">
+                    <label for="radio3i">
+                      In the Mood by Glenn Miller (1939)
+                    </label>
+                  </div>
+                </div>
+
+                <div class="right9">
+                  <div class="radio">
+                    <input type="radio" name="radio9" id="radio4i" value="option4i">
+                    <label for="radio4i">
+                      You Can't Catch Me by Chuck Berry (1956)
+                    </label>
+                  </div>
+                </div>
+
+                  <div class="form-group">
+                    <button id="submit9" class="btn btn-info" type="button" value="Submit">Submit</button>
+                    <button id="reset9" class="btn btn-default" type="reset" value="startover">Reset</button>
+                  </div>
+                </div>
               </div>
-              <div class="answer_audio">
-                <audio controls preload="auto">
-                  <source src="audio/you_cant_catch_me.mp3" type="audio/mp3">
-                </audio>
+
+              <div class="row">
+                <div class="col">
+                  <div class="button">
+                    <button id="back9" class="btn btn-warning" type="button" value="back">Back</button>
+                    <button id= "next9" class="btn btn-primary" type="button" value="next">Next</button>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> Baby Let's Play House by Elvis Presley (1955)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Moonlight Sonata by Ludwig Van Beethoven (1801)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2"> In the Mood by Glenn Miller (1939)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> ou Can't Catch Me by Chuck Barry (1956)</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
-            </div>
-          </div>
 
           <div class="question10">
-            <img id="hotlinebling_img" class="albumart" src="images/hotlinebling_img.jpg" alt="Hotline Bling by Drake">
+            <div class="row">
+              <div class="col">
+                <div id="drake">
+                  <img id="hotlinebling_img" class="albumart" src="images/hotlinebling_img.jpg" alt="Hotline Bling by Drake">
 
-            <div><label>What song is sampled in Drake's "Hotline Bling" (2015)?</label></div>
+                  <div class="question_audio">
+                    <audio controls preload="auto">
+                      <source src="audio/hotline_bling.mp3" type="audio/mp3">
+                    </audio>
+                  </div>
+                </div>
 
-            <div id="container10" style="width:100%; height:400px;"></div>
+                <div id="timmy">
+                  <div class="chart" id="container10"></div>
+                    <script>
+                    function chart10() {
+                      var myChart = Highcharts.chart('container10', {
+                    chart: {
+                        plotBackgroundColor: null,
+                        plotBorderWidth: 0,
+                        plotShadow: false
+                    },
+                    title: {
+                        text: 'Percentage<br>of song<br>that uses<br>sample',
+                        align: 'center',
+                        verticalAlign: 'middle',
+                        y: 40
+                    },
+                    tooltip: {
+                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                    },
+                    plotOptions: {
+                        pie: {
+                            dataLabels: {
+                                enabled: true,
+                                distance: -50,
+                                style: {
+                                    fontWeight: 'bold',
+                                    color: 'white'
+                                }
+                            },
+                            startAngle: -90,
+                            endAngle: 90,
+                            center: ['50%', '75%']
+                        }
+                    },
+                    series: [{
+                        type: 'pie',
+                        name: 'Sample appearance',
+                        innerSize: '50%',
+                        data: [
+                            ['Sample', 100],
+                            ]
+                          }]
+                        });
+                      }
+                  </script>
 
-            <script>
-            Highcharts.chart('container10', {
-              chart: {
-                  plotBackgroundColor: null,
-                  plotBorderWidth: 0,
-                  plotShadow: false
-              },
-              title: {
-                  text: 'Percentage<br>of song<br>that uses<br>sample',
-                  align: 'center',
-                  verticalAlign: 'middle',
-                  y: 40
-              },
-              tooltip: {
-                  pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-              },
-              plotOptions: {
-                  pie: {
-                      dataLabels: {
-                          enabled: true,
-                          distance: -50,
-                          style: {
-                              fontWeight: 'bold',
-                              color: 'white'
-                          }
-                      },
-                      startAngle: -90,
-                      endAngle: 90,
-                      center: ['50%', '75%']
-                  }
-              },
-              series: [{
-                  type: 'pie',
-                  name: 'Sample appearance',
-                  innerSize: '50%',
-                  data: [
-                      ['Sample', 100],
-                      ]
-                    }]
-                  });
-            </script>
+                  <div class="answer_audio">
+                    <audio controls preload="auto">
+                      <source src="audio/why_cant_we_live_together.mp3" type="audio/mp3">
+                    </audio>
+                  </div>
+                </div>
+              </div>
 
-            <div id="audioplayer">
-              <div class="question_audio">
-                <audio controls preload="auto">
-                  <source src="audio/hotline_bling.mp3" type="audio/mp3">
-                </audio>
-              <div class="answer_audio">
-                <audio controls preload="auto">
-                  <source src="audio/why_cant_we_live_together.mp3" type="audio/mp3">
-                </audio>
+              <div class="col">
+                <div><label>What song is sampled in Drake's "Hotline Bling" (2015)?</label></div>
+
+                <div class="right10">
+                  <div class="radio">
+                    <input type="radio" name="radio10" id="radio1j" value="option1j">
+                    <label for="radio1j">
+                      Why Can't We Live Together by Timmy Thomas (1972)
+                    </label>
+                  </div>
+                </div>
+
+                <div class="wrong10">
+                  <div class="radio">
+                    <input type="radio" name="radio10" id="radio2j" value="option2j">
+                    <label for="radio2j">
+                      Live @ Cutloose 2nd Birthday Party by Moodymann (2010)
+                    </label>
+                  </div>
+                </div>
+
+                <div class="wrong10">
+                  <div class="radio">
+                    <input type="radio" name="radio10" id="radio3j" value="option3j">
+                    <label for="radio3j">
+                      If You Had My Love by Jennifer Lopez (1998)
+                    </label>
+                  </div>
+                </div>
+
+                <div class="wrong10">
+                  <div class="radio">
+                    <input type="radio" name="radio10" id="radio4j" value="option4j">
+                    <label for="radio4j">
+                      Who U Wit? by Lil Jon and The East Side Boyz (1997)
+                    </label>
+                  </div>
+                </div>
+
+                  <div class="form-group">
+                    <button id="submit10" class="btn btn-info" type="button" value="Submit">Submit</button>
+                    <button id="reset10" class="btn btn-default" type="reset" value="startover">Reset</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="button">
+                    <button id="back10" class="btn btn-warning" type="button" value="back">Back</button>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="right-answer-1"> Why Can't We Live Together by Timmy Thomas (1972)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-1"> Live @ Cutloose 2nd Birthday Party by Moodymann (2010)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-2">If You Had My Love by Jennifer Lopez (1998)</label>
-            </div>
-
-            <div class="form-check-label">
-              <label class="form-control-label"><input class="form-check-input" type="radio" name="answer" value="wrong-answer-3"> Who U Wit? by Lil Jon and The East Side Boyz (1997)</label>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-              <button class="btn btn-default" type="reset" value="startover">Reset</button>
-            </div>
-          </div>
 
           <footer>
             <p><small>This page is an assignment for the University of Florida course, Introduction to Web Apps, by Mikaela Sheerin.</small></p>
