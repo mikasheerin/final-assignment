@@ -1,10 +1,6 @@
 $(document).ready(function() {
 
   ///audio stuff////
-      $("audio").each(function() {
-        this.pause();
-        this.currentTime = 0;
-      });
 
       document.addEventListener('play', function(e){
           var audios = document.getElementsByTagName('audio');
@@ -14,6 +10,7 @@ $(document).ready(function() {
               }
           }
       }, true);
+
 
 ///song & sample switches///
 

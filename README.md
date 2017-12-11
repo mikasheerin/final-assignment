@@ -8,8 +8,8 @@ This week I had to rearrange some of the html in order to make the javascript ea
 
 Week 3
 
-This week I made everything work functionally, from hiding/showing the songs and their samples, to making the app show one question at a time. I did this all through hide/show functions on buttons. I also played with the css and bootstrap to get the form to look to my liking and made sure it was responsive on mobile (which bootstrap makes it easy to do). I'm mostly pleased with my project as of now, except for the colors. I think they are too bright but I was matching the colors of the theme. I only had an issue with one of the charts for the sample "We Will Rock You" by Queen and cannot figure why that HighChart won't load like the rest, as I didn't change anything. 
+This week I made everything work functionally, from hiding/showing the songs and their samples, to making the app show one question at a time. I did this all through hide/show functions on buttons. I also played with the css and bootstrap to get the form to look to my liking and made sure it was responsive on mobile (which bootstrap makes it easy to do). I'm mostly pleased with my project as of now, except for the colors. I think they are too bright but I was matching the colors of the theme. I only had an issue with one of the charts for the sample "We Will Rock You" by Queen and cannot figure why that HighChart won't load like the rest, as I didn't change anything.
 
 Final summary of my project
 
-Your thoughts about the process of working on this project. (Minimum: 100 words.)
+Working on this project was certainly difficult as my idea really incorporated most of the assignments throughout the semester, and really put my memory and learning to the test! It was interesting to see how some things would work in my past assignments but then not at all in this project. I was extremely frustrated at times, but the breakthroughs of when I finally got things to work was extremely exciting. Although I'm not 100% satisfied with the aesthetics or functionality of my project, I'm very proud of how far it has come from the first week submission and am excited to share it with friends and family.  
